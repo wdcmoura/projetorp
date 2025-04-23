@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background-image: linear-gradient(to right, rgb(255, 165, 0), rgb(0, 179, 164)); /* Altera para um gradiente laranja a verde */
+            background-image: linear-gradient(to right, rgb(255, 165, 0), rgb(0, 179, 164));
         }
         .box {
             color: white;
@@ -20,22 +20,23 @@
             padding: 15px;
             border-radius: 15px;
             width: 20%;
-            text-align: center; /* Centraliza o conteúdo */
+            text-align: center;
         }
         fieldset {
-            border: 3px solid rgb(255, 165, 0); /* Altera para cor laranja */
+            border: 3px solid rgb(255, 165, 0);
         }
         legend {
-            border: 1px solid rgb(255, 165, 0); /* Altera para cor laranja */
+            border: 1px solid rgb(255, 165, 0);
             padding: 10px;
             text-align: center;
-            background-color: rgb(255, 165, 0); /* Altera para cor laranja */
+            background-color: rgb(255, 165, 0);
             border-radius: 8px;
         }
         .inputBox {
             position: relative;
+            margin-bottom: 20px;
         }
-        .inputUser  {
+        .inputUser {
             background: none;
             border: none;
             border-bottom: 1px solid white;
@@ -44,22 +45,24 @@
             font-size: 15px;
             width: 100%;
             letter-spacing: 2px;
+            padding: 10px 0;
         }
         .labelInput {
             position: absolute;
-            top: 0px;
+            top: 10px;
             left: 0px;
             pointer-events: none;
             transition: .5s;
+            color: white;
         }
-        .input:User focus ~ .labelInput,
-        .input:User valid ~ .labelInput {
+        .inputUser:focus ~ .labelInput,
+        .inputUser:valid ~ .labelInput {
             top: -20px;
             font-size: 12px;
-            color: rgb(255, 165, 0); /* Altera para cor laranja */
+            color: rgb(255, 165, 0);
         }
         #submit {
-            background-image: linear-gradient(to right, rgb(0, 137, 123), rgb(255, 165, 0)); /* Laranja e verde */
+            background-image: linear-gradient(to right, rgb(0, 137, 123), rgb(255, 165, 0));
             width: 100%;
             border: none;
             padding: 15px;
@@ -69,7 +72,7 @@
             border-radius: 10px;
         }
         #submit:hover {
-            background-image: linear-gradient(to right, rgb(0, 122, 107), rgb(255, 165, 0)); /* Laranja mais suave */
+            background-image: linear-gradient(to right, rgb(0, 122, 107), rgb(255, 165, 0));
         }
         #backButton {
             position: absolute;
@@ -95,17 +98,15 @@
                 <legend><b>Fórmulário de Cadastro</b></legend>
                 <br>
                 <div class="inputBox">
-                    <input type="text" name="nome" id="nome" class="inputUser " required>
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
                     <label for="nome" class="labelInput">Nome completo</label>
                 </div>
-                <br><br>
                 <div class="inputBox">
-                    <input type="text" name="endereco" id="endereco" class="inputUser " required>
+                    <input type="text" name="endereco" id="endereco" class="inputUser" required>
                     <label for="endereco" class="labelInput">Endereço</label>
                 </div>
-                <br><br>
                 <div class="inputBox">
-                    <input type="tel" name="telefone" id="telefone" class="inputUser " required>
+                    <input type="tel" name="telefone" id="telefone" class="inputUser" required>
                     <label for="telefone" class="labelInput">Telefone</label>
                 </div>
                 <p>Sexo:</p>
@@ -128,4 +129,3 @@
     </div>
 </body>
 </html>
-               

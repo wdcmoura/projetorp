@@ -1,0 +1,12 @@
+Nome: William
+CPF: 4157124788
+RG: 1456465
+Quantidade: 1
+Curso: Ciências da Computação
+----------------------
+Nome: William
+CPF: 41571577888
+RG: 42
+Quantidade: 1
+Curso: 112
+----------------------
