@@ -8,17 +8,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $genero = $_POST['genero'];
     $recebeu_cesta = $_POST['recebeu_cesta'];
 
-    // Cria a string para salvar no arquivo
-    $linha = "Nome: $nome | Endereço: $endereco | Telefone: $telefone | Gênero: $genero | Recebeu cesta: $recebeu_cesta\n";
+    // Define o caminho do arquivo CSV
+    $arquivo = 'cadastros.csv';
 
-    // Define o caminho do arquivo onde os dados serão salvos
-    $arquivo = 'cadastros.txt';
+    // Abre o arquivo no modo append (adicionar)
+    $fp = fopen($arquivo, 'a');
 
-    // Abre o arquivo e escreve a linha (adicionando no final)
-    file_put_contents($arquivo, $linha, FILE_APPEND);
+    if ($fp) {
+        // Cria um array com os dados
+        $dados = [$nome, $endereco, $telefone, $genero, $recebeu_cesta];
 
-    // Exibe mensagem de sucesso ou redireciona
-    echo "<p style='color:green;'>Cadastro realizado com sucesso!</p>";
+        // Escreve os dados no arquivo CSV
+        fputcsv($fp, $dados);
+
+        // Fecha o arquivo
+        fclose($fp);
+
+        // Exibe mensagem de sucesso
+        echo "<p style='color:green;'>Cadastro realizado com sucesso!</p>";
+    } else {
+        echo "<p style='color:red;'>Erro ao abrir o arquivo para salvar.</p>";
+    }
 } else {
     echo "<p style='color:red;'>Erro ao enviar o formulário.</p>";
 }
