@@ -1,3 +1,0 @@
-Nome: dfdfd | Endereço: teste | Telefone: tesasdf | Gênero: feminino | Recebeu cesta: não
-Nome: wdcmoura@gmail.com | Endereço: avenida antonio | Telefone: 11973306452 | Gênero: masculino | Recebeu cesta: não
-Nome: william moura | Endereço: avenida antonio di gioia 1115 | Telefone: 11973306452 | Gênero: outro | Recebeu cesta: sim
